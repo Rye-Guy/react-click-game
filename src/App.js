@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import flags from './flags.json';
-
-
+import Navbar from './components/Navbar';
+import MessageArea from './components/MessageArea';
+import FlagCard from './components/FlagCard';
 
 class App extends Component {
-  state ={
+  
+  state = {
     message: 'Select a Flag to Begin',
     topScore: 0,
     score: 0,
-    flags, flags,
+    flags: flags,
     unselectedFlags: flags
   }
 
@@ -48,19 +49,24 @@ class App extends Component {
         unselectedFlags: newFlags
       });
     }
+    this.shuffleArray(flags);
   }
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <div>
+        <Navbar></Navbar>
+        <MessageArea message={this.state.message} topScore={this.state.topScore} score={this.state.score}></MessageArea>
+   
+        {
+          this.state.flags.map(flags =>(
+            <FlagCard flag={flags.flag} 
+            imageLink={flags.imageLink}
+            selectFlag={this.selectFlag}
+            score={this.state.score} />
+          ))
+        }
+        </div>
     );
   }
 }
