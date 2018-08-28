@@ -4,6 +4,7 @@ import flags from './flags.json';
 import Navbar from './components/Navbar';
 import MessageArea from './components/MessageArea';
 import FlagCard from './components/FlagCard';
+// import GameLoseModal from './components/GameLoseModal';
 
 class App extends Component {
   
@@ -18,7 +19,7 @@ class App extends Component {
   componentDidMount(){
 
   }
-
+r44
   //Rewritten Shuffle for Learning
   FisherYatesShuffle = (array) => {
     let currentIndex = array.length, tempValue, randomIndex;
@@ -48,8 +49,11 @@ class App extends Component {
         topScore: (this.state.score > this.state.topScore) ? this.state.score : this.state.topScore,
         score: 0,
         flags: flags,
+        //getting one wrong resets the flag unselected flag state to include all the flags from the json file.
         unselectedFlags: flags
+        
       });
+
     }
     else{
       
@@ -69,7 +73,9 @@ class App extends Component {
     return (
       <div>
         <Navbar></Navbar>
+        
         <MessageArea message={this.state.message} topScore={this.state.topScore} score={this.state.score}></MessageArea>
+        {/* <GameLoseModal topScore={this.state.topScore} score={this.state.score}></GameLoseModal> */}
           <div className="flags-list">
         {
             this.state.flags.map(flags =>(

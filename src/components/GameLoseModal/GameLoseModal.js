@@ -1,8 +1,17 @@
 import React from 'react';
 
-const GameLoseModal = () =>{
+const GameLoseModal = (props) =>{
     return (
-        <div></div>
+        <div>
+        <Button onClick={() => {
+          $('#foo').modal('open')
+        }}>Show Modal</Button>
+        <Modal
+          id='foo'
+          header='Modal Header'>
+          Lorem ipsum dolor sit amet
+        </Modal>
+      </div>
     );
 }
 

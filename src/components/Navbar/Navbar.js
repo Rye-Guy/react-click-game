@@ -3,7 +3,6 @@ import "./Navbar.css";
 
 
 const Navbar = (props) => {
-
     return (
         <nav>
             <div className="nav-wrapper">
