@@ -19,19 +19,31 @@ class App extends Component {
 
   }
 
-  shuffleArray = (array) => {
-    for(let i = array.length - 1; i > 0; i--){
-      let j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j] = array[j], array[i]];
+  //Rewritten Shuffle for Learning
+  FisherYatesShuffle = (array) => {
+    let currentIndex = array.length, tempValue, randomIndex;
+    
+    while (0 !== currentIndex){
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1; 
+
+      tempValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = tempValue;
     }
+
+    return array;
+
   }
 
-  selectFlag = (flag) =>{
+  selectFlag = (flag) => {
     const findFlag = this.state.unselectedFlags.find(item => item.flag === flag);
+    console.log(findFlag);
 
     if(findFlag === undefined){
       this.setState({
         message: 'You have chosen poorly',
+        //Ternary Operator: if the current score is greater than the top score to update the new top score for the user else keep the top score.
         topScore: (this.state.score > this.state.topScore) ? this.state.score : this.state.topScore,
         score: 0,
         flags: flags,
@@ -41,7 +53,7 @@ class App extends Component {
     else{
       
       const newFlags = this.state.unselectedFlags.filter(item => item.flag !== flag)
-
+      console.log(newFlags);
       this.setState({
         message: "You have chosen wisely",
         score: this.state.score + 1,
@@ -49,7 +61,7 @@ class App extends Component {
         unselectedFlags: newFlags
       });
     }
-    this.shuffleArray(flags);
+    this.FisherYatesShuffle(flags);
   }
 
   render() {
@@ -57,15 +69,16 @@ class App extends Component {
       <div>
         <Navbar></Navbar>
         <MessageArea message={this.state.message} topScore={this.state.topScore} score={this.state.score}></MessageArea>
-   
+          <div className="flags-list">
         {
-          this.state.flags.map(flags =>(
+            this.state.flags.map(flags =>(
             <FlagCard flag={flags.flag} 
             imageLink={flags.imageLink}
             selectFlag={this.selectFlag}
             score={this.state.score} />
           ))
         }
+          </div>
         </div>
     );
   }

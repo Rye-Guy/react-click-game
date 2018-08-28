@@ -3,7 +3,7 @@ import "./Navbar.css";
 
 
 const Navbar = (props) => {
-    console.log(props);
+
     return (
         <nav>
             <div className="nav-wrapper">

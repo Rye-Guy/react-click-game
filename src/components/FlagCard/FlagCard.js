@@ -2,7 +2,6 @@ import React from 'react';
 import './FlagCard.css';
 
 const FlagCard = (props) => {
-    console.log(props);
     return (
     <a onClick={() => props.selectFlag(props.flag)}>
         <div className="card">
