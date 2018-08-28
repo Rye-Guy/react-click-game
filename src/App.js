@@ -37,8 +37,9 @@ class App extends Component {
   }
 
   selectFlag = (flag) => {
+    console.log(flag);
     const findFlag = this.state.unselectedFlags.find(item => item.flag === flag);
-    console.log(findFlag);
+    // console.log(findFlag);
 
     if(findFlag === undefined){
       this.setState({
