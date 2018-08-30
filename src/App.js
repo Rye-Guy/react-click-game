@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './App.css';
 import flags from './flags.json';
 import Navbar from './components/Navbar';
@@ -71,6 +72,7 @@ class App extends Component {
 
   render() {
     return (
+      <Route exact path={"/"}>
       <div>
         <Navbar message={this.state.message} topScore={this.state.topScore} score={this.state.score}></Navbar>
         
@@ -86,7 +88,8 @@ class App extends Component {
           ))
         }
           </div>
-        </div>
+      </div>
+      </Route>
     );
   }
 }
