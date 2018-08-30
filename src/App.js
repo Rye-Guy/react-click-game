@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import flags from './flags.json';
 import Navbar from './components/Navbar';
-import MessageArea from './components/MessageArea';
+// import MessageArea from './components/MessageArea';
 import FlagCard from './components/FlagCard';
 // import GameLoseModal from './components/GameLoseModal';
 
@@ -19,7 +19,7 @@ class App extends Component {
   componentDidMount(){
 
   }
-r44
+
   //Rewritten Shuffle for Learning
   FisherYatesShuffle = (array) => {
     let currentIndex = array.length, tempValue, randomIndex;
@@ -72,9 +72,9 @@ r44
   render() {
     return (
       <div>
-        <Navbar></Navbar>
+        <Navbar message={this.state.message} topScore={this.state.topScore} score={this.state.score}></Navbar>
         
-        <MessageArea message={this.state.message} topScore={this.state.topScore} score={this.state.score}></MessageArea>
+       
         {/* <GameLoseModal topScore={this.state.topScore} score={this.state.score}></GameLoseModal> */}
           <div className="flags-list">
         {

@@ -6,9 +6,10 @@ const Navbar = (props) => {
     return (
         <nav>
             <div className="nav-wrapper">
-                <a href="/" className="brand-logo">Flag Match Game!</a>
-                <ul id="nav-mobile" className="right hide-on-med-and-down">
-                    <li><a href="/">Home</a>/a></li>
+                <ul>
+                <li href="/" className="">Top Score: {props.topScore}</li>
+                <li href="/" className="">{props.message}</li>
+                <li href="/" className="">Score: {props.score}</li>
                 </ul>
             </div>  
         </nav>

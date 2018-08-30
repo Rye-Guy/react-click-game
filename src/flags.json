@@ -4,8 +4,8 @@
         "imageLink": "https://upload.wikimedia.org/wikipedia/en/c/cf/Flag_of_Canada.svg"
     },
     {
-        "flag": "nepal",
-        "imageLink": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Flag_of_Nepal.svg"
+        "flag": "labanon",
+        "imageLink": "https://upload.wikimedia.org/wikipedia/commons/5/59/Flag_of_Lebanon.svg"
     },
     {
         "flag": "south africa",
@@ -30,5 +30,37 @@
     {
         "flag": "kuwait",
         "imageLink": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Flag_of_Kuwait.svg"
+    },
+    {
+        "flag": "mexico",
+        "imageLink": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Flag_of_Mexico.svg"
+    },
+    {
+        "flag": "chile",
+        "imageLink": "https://upload.wikimedia.org/wikipedia/commons/7/78/Flag_of_Chile.svg"
+    },
+    {
+        "flag": "nigeria",
+        "imageLink": "https://upload.wikimedia.org/wikipedia/commons/7/79/Flag_of_Nigeria.svg"
+    },
+    {
+        "flag": "new zealand",
+        "imageLink": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Flag_of_New_Zealand.svg"
+    },
+    {
+        "flag": "venezuela",
+        "imageLink": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Flag_of_Venezuela_%281905%E2%80%931930%29.svg"
+    },
+    {
+        "flag": "cambodia",
+        "imageLink": "https://upload.wikimedia.org/wikipedia/commons/8/83/Flag_of_Cambodia.svg"
+    },
+    {
+        "flag": "algeria",
+        "imageLink": "https://upload.wikimedia.org/wikipedia/commons/7/77/Flag_of_Algeria.svg"
+    },
+    {
+        "flag": "greece",
+        "imageLink": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Greece.svg"
     }
 ]
